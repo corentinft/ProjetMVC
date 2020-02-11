@@ -1,2 +1,2 @@
-# ProjetMDC
-Projet pour la semaine de MDC (laravel)
+# ProjetMVC
+Projet pour la semaine de MVC (laravel)
