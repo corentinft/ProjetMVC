@@ -20,22 +20,12 @@
                 margin: 0;
             }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
             ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #333;
+                background-color: #4bbdab;
             }
 
             li {
@@ -51,24 +41,29 @@
             }
 
             li a:hover {
-                background-color: #111;
+                background-color: #22b5fb;
             }
+
             .float-right{
                 float:right;
+            }
+
+            .lists {
+                color: #22b5fb;
+                font-size: 20px;
+                font-weight: 525;
             }
 
             @yield('style')
         </style>
     </head>
     <body>
-        <div class="">
-            <ul>
-                <li><a href="{{ url('/') }}">Home</a></li>
-                <li><a href="{{ url('/') }}">News</a></li>
-                <li><a href="{{ url('/') }}">Contact</a></li>
-                <li class="float-right"><a href="{{ url('/') }}">About</a></li>
-            </ul>
-        </div>
+        <ul class="lists">
+            <li><a href="{{ url('/') }}">Home</a></li>
+            <li><a href="{{ url('/') }}">News</a></li>
+            <li><a href="{{ url('/') }}">Contact</a></li>
+            <li class="float-right"><a href="{{ url('/') }}">About</a></li>
+        </ul>
 
         <div class="container">
             @yield('content')
