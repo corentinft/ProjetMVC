@@ -4,44 +4,44 @@
 
 @section('style')
     .full-height {
-        height: 94vh;
+    height: 94vh;
     }
 
     .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     }
 
     .position-ref {
-        position: relative;
+    position: relative;
     }
 
     .top-right {
-        position: absolute;
-        right: 10px;
-        top: 18px;
+    position: absolute;
+    right: 10px;
+    top: 18px;
     }
 
     .content {
-        text-align: center;
+    text-align: center;
     }
 
     .title {
-        color: #f05791;
-        font-size: 84px;
+    color: #f05791;
+    font-size: 84px;
     }
 
     .sub-title {
-        color: #22b5fb;
-        padding: 0 25px;
-        font-size: 20px;
-        font-weight: 550;
-        letter-spacing: .1rem;
+    color: #22b5fb;
+    padding: 0 25px;
+    font-size: 20px;
+    font-weight: 550;
+    letter-spacing: .1rem;
     }
 
     .m-b-md {
-        margin-bottom: 30px;
+    margin-bottom: 30px;
     }
 
 @endsection
