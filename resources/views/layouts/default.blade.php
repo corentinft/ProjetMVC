@@ -9,10 +9,18 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
+        <!-- Buttons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #000000;
+                background-image:url({{url('images/borne.jpg')}});
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                text-align: center;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -51,7 +59,7 @@
             .lists {
                 color: #22b5fb;
                 font-size: 20px;
-                font-weight: 525;
+                font-weight: 500;
             }
 
             @yield('style')
@@ -59,10 +67,10 @@
     </head>
     <body>
         <ul class="lists">
-            <li><a href="{{ url('/') }}">Home</a></li>
-            <li><a href="{{ url('/') }}">News</a></li>
-            <li><a href="{{ url('/') }}">Contact</a></li>
-            <li class="float-right"><a href="{{ url('/') }}">About</a></li>
+            <li><a href="{{ url('/') }}">Accueil</a></li>
+            <li><a href="{{ url('/') }}">Créations</a></li>
+            <li><a href="{{ url('/') }}">Commande</a></li>
+            <li class="float-right"><a href="{{ url('/') }}">A propos</a></li>
         </ul>
 
         <div class="container">
