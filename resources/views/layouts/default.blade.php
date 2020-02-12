@@ -61,7 +61,7 @@
         <ul class="lists">
             <li><a href="{{ url('/') }}">Home</a></li>
             <li><a href="{{ url('/') }}">News</a></li>
-            <li><a href="{{ url('/') }}">Contact</a></li>
+            <li><a href="{{ url('/contact') }}">Contact</a></li>
             <li class="float-right"><a href="{{ url('/') }}">About</a></li>
         </ul>
 
