@@ -44,49 +44,21 @@
         font-size: 84px;
     }
 
+    #titre2 {
+        margin-top: 40px;
+    }
+
     .sub-title {
         color: #22b5fb;
         padding: 0 25px;
         font-size: 20px;
         font-weight: 550;
         letter-spacing: .1rem;
+        margin-top: 30px;
     }
 
     .m-b-md {
         margin-bottom: 10px;
-    }
-
-    .button-to-creation {
-        margin-bottom: 30px;
-    }
-
-    .button-down {
-        position: relative;
-        padding: 5px;
-        margin: 30px auto;
-        background: #fff;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        transition: all 0.2s linear;
-    }
-
-    .button-down:hover {
-        transform: translate3d(0, 10px, 0);
-    }
-
-    .button-down::after {
-        content: "";
-        position: absolute;
-        left: 12px;
-        z-index: 11;
-        display: block;
-        width: 25px;
-        height: 25px;
-        border-top: 2px solid #000;
-        border-left: 2px solid #000;
-        top: 8px;
-        transform: rotate(225deg);
     }
 
     #section02 {
@@ -94,16 +66,12 @@
         background-color: rgba(0,0,0,0.8);
     }
 
-    .content2 {
-        text-align: left;
-        margin-right: 350px;
-    }
-
     .p {
-        width: 600px;
+        text-align: left;
+        width: 800px;
         color: #22b5fb;
     }
-
+    
     .demo a {
         position: absolute;
         bottom: 20px;
@@ -247,10 +215,9 @@
             <div class="title m-b-md">
                 ARCADIA
             </div>
-            <div class="button-to-creation">
-                <button type="button" class="btn btn-danger">Psssst, clique ici pour venir voir nos créations !</button>
+            <div id="logo">
+                <img src="{{url('images/pixel.png')}}">
             </div>
-
             <div class="sub-title">
                 Entreprise de création de bornes d'arcade
             </div>
@@ -260,18 +227,29 @@
         </div>
     </div>
     <div class="flex-center position-ref full-height" id="section02">
-        <div class="content2">
-            <div class="title m-b-md">
+        <div class="container">
+        <div class="row justify-content-start">
+            <div class="title m-b-md col-3" id="titre">
                 <h2>Que faisons-nous ?</h2>
             </div>
-            <div class="p">
+            <div class="p col-10">
                 <p>Chez Arcadia, nous créeons la machine d'arcade dont vous aviez toujours révé, nous travaillons dans les meilleurs délais grâce à la relation proches que nous entretenons avec notre clientèle.
                 Peu importe le choix de votre thème nous vous écouterons avec professionalité et sérieux. Grâce à notre expérience et à notre imagination,
                 vous découvrirez vos machine d'arcade dans toutes les couleurs et thèmes dont vous pourriez imaginer. Apprenez-en plus sur nous sur notre page<a href=""> "A propos".</a></p>
             </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="title m-b-md col-6" id="titre2">
+                <h2>Découvrez nos précédentes créations !</h2>
+            </div>
+            <div id="pics" class="col-7">
+                <img src="{{url('images/borne-mvs.jpg')}}">
+                <img src="{{url('images/borne-mvx.jpg')}}">
+            </div>
             <div class="demo" id="button02">
                 <a href="#button01"><span></span><span></span><span></span>Scroll Up</a>
             </div>
+        </div>
         </div>
     </div>
 @endsection

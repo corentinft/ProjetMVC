@@ -71,20 +71,13 @@
                 color: #f05791 !important;
             }
 
-            .align-center{
-                /*margin-right: 50%;*/
-                margin-left: 53vh;
-            }
-
             @yield('style')
         </style>
     </head>
     <body>
         <ul class="lists">
             <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li><a href="{{ url('/') }}">Créations</a></li>
             <li><a href="{{ url('/') }}">Commande</a></li>
-            <li><a class="styleLogo align-center" href="{{ url('/') }}">ARCADIA</a></li>
             <li class="float-right"><a href="{{ url('/contact') }}">Contact</a></li>
         </ul>
 
@@ -103,9 +96,6 @@
                         <ul class="list-unstyled">
                             <li>
                                 <a href="{{ url('/') }}">Accueil</a>
-                            </li>
-                            <li>
-                                <a href="{{ url('/') }}">Nos créations</a>
                             </li>
                             <li>
                                 <a href="{{ url('/') }}">Commander une borne d'arcade</a>
