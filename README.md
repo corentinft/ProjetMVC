@@ -9,6 +9,8 @@ php 7.1 +
 
 nodejs -> npm
 
+composer
+
 # Installation
 
 Clonez du git :
