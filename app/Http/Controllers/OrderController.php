@@ -40,7 +40,7 @@ class OrderController extends Controller {
         $form = $this->getForm();
         $form->redirectIfNotValid();
         $mail = $this->sendMail->OrderMail($form->getFieldValues(), false);
-        $mail = $this->sendMail->OrderMail($form->getFieldValues(), true);
+        $mailAdmin = $this->sendMail->OrderMail($form->getFieldValues(), true);
         $response = json_decode($mail, true);
         return view('order', [
             'form' => $form,

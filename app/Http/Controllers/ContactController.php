@@ -41,7 +41,7 @@ class ContactController extends Controller {
         $form = $this->getForm();
         $form->redirectIfNotValid();
         $mail = $this->sendMail->ContactMail($form->getFieldValues(), false);
-        $mail = $this->sendMail->ContactMail($form->getFieldValues(), true);
+        $mailAdmin = $this->sendMail->ContactMail($form->getFieldValues(), true);
         $response = json_decode($mail, true);
         return view('contact', [
             'form' => $form,
