@@ -5,31 +5,31 @@
 @section('style')
 
     body {
-    background-color: #000000;
-    background-image:url({{url('images/borne.jpg')}});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
+        background-color: #000000;
+        background-image:url({{url('images/borne.jpg')}});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
 
     .full-height {
-    height: 94vh;
+        height: 94vh;
     }
 
     .flex-center {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 
     .position-ref {
-    position: relative;
+        position: relative;
     }
 
     .top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
+        position: absolute;
+        right: 10px;
+        top: 18px;
     }
 
 
@@ -40,16 +40,16 @@
     }
 
     .title {
-    color: #f05791;
-    font-size: 84px;
+        color: #f05791;
+        font-size: 84px;
     }
 
     .sub-title {
-    color: #22b5fb;
-    padding: 0 25px;
-    font-size: 20px;
-    font-weight: 550;
-    letter-spacing: .1rem;
+        color: #22b5fb;
+        padding: 0 25px;
+        font-size: 20px;
+        font-weight: 550;
+        letter-spacing: .1rem;
     }
 
     .m-b-md {
@@ -156,26 +156,26 @@
         animation-delay: .3s;
     }
     @-webkit-keyframes sdb07 {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-    }
-    @keyframes sdb07 {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+        }
+        @keyframes sdb07 {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
     }
 
     #button02 a {

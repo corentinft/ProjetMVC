@@ -3,8 +3,12 @@
 @section('title', 'Contact')
 
 @section('style')
+    body {
+        overflow: auto;
+    }
+
     .full-height {
-    height: 94vh;
+    height: 77.15vh;
     }
 
     .flex-center {

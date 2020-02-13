@@ -63,6 +63,19 @@
                 font-weight: 500;
             }
 
+            .bg-black {
+                background-color: #000;
+            }
+
+            .styleLogo {
+                color: #f05791 !important;
+            }
+
+            .align-center{
+                /*margin-right: 50%;*/
+                margin-left: 53vh;
+            }
+
             @yield('style')
         </style>
     </head>
@@ -70,13 +83,63 @@
         <ul class="lists">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li><a href="{{ url('/') }}">Créations</a></li>
-            <li><a href="{{ url('/contact') }}">Commande</a></li>
-            <li class="float-right"><a href="{{ url('/') }}">A propos</a></li>
+            <li><a href="{{ url('/') }}">Commande</a></li>
+            <li><a class="styleLogo align-center" href="{{ url('/') }}">ARCADIA</a></li>
+            <li class="float-right"><a href="{{ url('/contact') }}">Contact</a></li>
         </ul>
 
         <div class="container">
             @yield('content')
         </div>
+
+        <footer class="bg-black page-footer font-small blue pt-4">
+            <div class="container-fluid text-center text-md-left">
+                <div class="row">
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <div class="col-md-9 mb-md-0 mb-3">
+                        <h5 class="text-uppercase">Pages</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="{{ url('/') }}">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="{{ url('/') }}">Nos créations</a>
+                            </li>
+                            <li>
+                                <a href="{{ url('/') }}">Commander une borne d'arcade</a>
+                            </li>
+                            <li>
+                                <a href="{{ url('contact') }}">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <h5 class="text-uppercase">Réseaux sociaux</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">FaceBook</a>
+                            </li>
+                            <li>
+                                <a href="#">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#">Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright text-center py-3">
+                © 2020 Copyright: Arcadia
+            </div>
+
+        </footer>
         <script type="text/javascript">
             $('a[href^="#"]').click(function(){
                 var the_id = $(this).attr("href");
