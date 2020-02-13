@@ -77,13 +77,7 @@
     <body>
         <ul class="lists">
             <li><a href="{{ url('/') }}">Accueil</a></li>
-<<<<<<< HEAD
-            <li><a href="{{ url('/') }}">Créations</a></li>
             <li><a href="{{ url('/order') }}">Commander une borne</a></li>
-            <li><a class="styleLogo align-center" href="{{ url('/') }}">ARCADIA</a></li>
-=======
-            <li><a href="{{ url('/') }}">Commande</a></li>
->>>>>>> e984064eb33e1090813325320338da8266994995
             <li class="float-right"><a href="{{ url('/contact') }}">Contact</a></li>
         </ul>
 
@@ -104,14 +98,7 @@
                                 <a href="{{ url('/') }}">Accueil</a>
                             </li>
                             <li>
-<<<<<<< HEAD
-                                <a href="{{ url('/') }}">Nos créations</a>
-                            </li>
-                            <li>
                                 <a href="{{ url('order') }}">Commander une borne d'arcade</a>
-=======
-                                <a href="{{ url('/') }}">Commander une borne d'arcade</a>
->>>>>>> e984064eb33e1090813325320338da8266994995
                             </li>
                             <li>
                                 <a href="{{ url('contact') }}">Contact</a>
