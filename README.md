@@ -13,20 +13,20 @@ nodejs -> npm
 
 Clonez du git :
 
-git clone https://github.com/corentinft/ProjetMVC.git
+    git clone https://github.com/corentinft/ProjetMVC.git
 
 Allez dans le dossier du projet :
 
-cd ProjetMVC
+    cd ProjetMVC
 
 installez le projet laravel:
 
-composer install
+    composer install
 
-npm install
+    npm install
 
-npm run dev
+    npm run dev
 
 lancez le projet :
 
-php artisan serve
+    php artisan serve
