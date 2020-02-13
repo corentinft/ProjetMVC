@@ -28,7 +28,7 @@ class SendMail
 
         return json_encode([
             'success' => true,
-            'message' => 'Le Formulaire de contact a bien été envoyé !'
+            'message' => 'Le formulaire de contact a bien été envoyé !'
         ]);
     }
 
