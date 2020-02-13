@@ -83,7 +83,7 @@
         <ul class="lists">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li><a href="{{ url('/') }}">Créations</a></li>
-            <li><a href="{{ url('/') }}">Commande</a></li>
+            <li><a href="{{ url('/order') }}">Commander une borne</a></li>
             <li><a class="styleLogo align-center" href="{{ url('/') }}">ARCADIA</a></li>
             <li class="float-right"><a href="{{ url('/contact') }}">Contact</a></li>
         </ul>
@@ -108,7 +108,7 @@
                                 <a href="{{ url('/') }}">Nos créations</a>
                             </li>
                             <li>
-                                <a href="{{ url('/') }}">Commander une borne d'arcade</a>
+                                <a href="{{ url('order') }}">Commander une borne d'arcade</a>
                             </li>
                             <li>
                                 <a href="{{ url('contact') }}">Contact</a>

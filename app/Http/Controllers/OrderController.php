@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Forms\ContactForm;
+use App\Forms\OrderForm;
 use App\Service\SendMail;
 use Kris\LaravelFormBuilder\FormBuilder;
 
-class ContactController extends Controller {
+class OrderController extends Controller {
 
     /**
      * @var FormBuilder
@@ -22,13 +22,12 @@ class ContactController extends Controller {
         $this-> formBuilder = $formBuilder;
         $this-> sendMail = $sendMail;
 
-
     }
 
     public function index () {
 
         $form = $this->getForm();
-        return view('contact', [
+        return view('order', [
             'form' => $form,
             'success' => null,
             'message' => null
@@ -40,10 +39,10 @@ class ContactController extends Controller {
 
         $form = $this->getForm();
         $form->redirectIfNotValid();
-        $mail = $this->sendMail->ContactMail($form->getFieldValues(), false);
-        $mail = $this->sendMail->ContactMail($form->getFieldValues(), true);
+        $mail = $this->sendMail->OrderMail($form->getFieldValues(), false);
+        $mail = $this->sendMail->OrderMail($form->getFieldValues(), true);
         $response = json_decode($mail, true);
-        return view('contact', [
+        return view('order', [
             'form' => $form,
             'success' => $response['success'],
             'message' => $response['message']
@@ -53,7 +52,7 @@ class ContactController extends Controller {
 
     private function getForm(){
 
-        return $this->formBuilder->create(ContactForm::class, []);
+        return $this->formBuilder->create(OrderForm::class, []);
 
     }
 

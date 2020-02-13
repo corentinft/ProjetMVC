@@ -12,6 +12,8 @@
 */
 Route::resource('contact', 'ContactController');
 
+Route::resource('order', 'OrderController');
+
 Route::get('/', function () {
     return view('home');
 });
