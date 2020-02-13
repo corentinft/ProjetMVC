@@ -12,15 +12,20 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
 
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <style>
             html, body {
-                background-color: #fff;
+                overflow: hidden;
+                text-align: center;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
+                width: 100vw;
                 margin: 0;
             }
 
@@ -29,7 +34,7 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #4bbdab;
+                background-color: #000000;
             }
 
             li {
@@ -38,7 +43,7 @@
 
             li a {
                 display: block;
-                color: white;
+                color: #4bbdab;
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
@@ -55,7 +60,7 @@
             .lists {
                 color: #22b5fb;
                 font-size: 20px;
-                font-weight: 525;
+                font-weight: 500;
             }
 
             @yield('style')
@@ -63,14 +68,26 @@
     </head>
     <body>
         <ul class="lists">
-            <li><a href="{{ url('/') }}">Home</a></li>
-            <li><a href="{{ url('/') }}">News</a></li>
-            <li><a href="{{ url('/contact') }}">Contact</a></li>
-            <li class="float-right"><a href="{{ url('/') }}">About</a></li>
+            <li><a href="{{ url('/') }}">Accueil</a></li>
+            <li><a href="{{ url('/') }}">Créations</a></li>
+            <li><a href="{{ url('/contact') }}">Commande</a></li>
+            <li class="float-right"><a href="{{ url('/') }}">A propos</a></li>
         </ul>
 
         <div class="container">
             @yield('content')
         </div>
+        <script type="text/javascript">
+            $('a[href^="#"]').click(function(){
+                var the_id = $(this).attr("href");
+                if (the_id === '#') {
+                    return;
+                }
+                $('html, body').animate({
+                    scrollTop:$(the_id).offset().top
+                }, 'slow');
+                return false;
+            });
+        </script>
     </body>
 </html>
