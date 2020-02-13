@@ -12,6 +12,8 @@
 */
 Route::resource('contact', 'ContactController');
 
+Route::resource('acknowledgement', 'AcknowledgementController');
+
 Route::get('/', function () {
     return view('home');
-});;
+});

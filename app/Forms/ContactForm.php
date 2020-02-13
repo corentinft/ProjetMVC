@@ -8,16 +8,24 @@ class ContactForm extends Form
 {
     public function buildForm()
     {
+        $this -> formOptions = [
+            'method' => 'POST'
+        ];
+
         $this
-            ->add('firstname', 'text', [
-                'label' => 'Prénom'])
-            ->add('lastname', 'text', [
-                'label' => 'Nom'])
-            ->add('email', 'email', [
-                'label' => 'Email'])
-            ->add('message', 'textarea', [
-                'label' => 'Message'])
-            ->add('submit', 'submit', [
+            -> add('firstname', 'text', [
+                'label' => 'Prénom',
+                'rules' => 'required|max:255'])
+            -> add('lastname', 'text', [
+                'label' => 'Nom',
+                'rules' => 'required|max:255'])
+            -> add('email', 'email', [
+                'label' => 'Email',
+                'rules' => 'required|max:255|email:rfc,dns'])
+            -> add('message', 'textarea', [
+                'label' => 'Message',
+                'rules' => 'required|min:30'])
+            -> add('submit', 'submit', [
                 'label' => 'Envoyer!']);
     }
 }

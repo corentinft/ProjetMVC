@@ -13,37 +13,29 @@
     justify-content: center;
     }
 
-    .position-ref {
-    position: relative;
-    }
-
-    .content {
-    text-align: center;
-    }
-
-    form.form {
-    display: table;
-    }
-
-    div.form {
-    display: table-row;
-    }
-
-    label, input {
-    display: table-cell;
-    margin-bottom: 10px;
-    }
-
-    label {
-    padding-right: 10px;
-    }
-
 @endsection
 
 @section('content')
-    <div class="flex-center position-ref full-height">
-        <div class="content">
+    <div class="container full-height flex-center">
+        <div class="align-items-center">
+            @if ($success != null)
+                @if ($success == true)
+                    <div class="alert alert-success" role="alert">
+                        {{ $message }}
+                    </div>
+                @elseif ($success == false)
+                    <div class="alert alert-danger" role="alert">
+                        {{ $message }}
+                    </div>
+                @endif
+            @endif
+
             {!! form_start($form) !!}
+            <div class="row">
+                <div class="col-sm-6">{!! form_row($form->firstname) !!}</div>
+                <div class="col-sm-6">{!! form_row($form->lastname) !!}</div>
+            </div>
+            {!! form_rest($form) !!}
             {!! form_end($form) !!}
         </div>
     </div>
