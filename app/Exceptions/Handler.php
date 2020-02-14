@@ -3,7 +3,9 @@
 namespace App\Exceptions;
 
 use Exception;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\Debug\Exception\FatalThrowableError;
 
 class Handler extends ExceptionHandler
 {
@@ -46,6 +48,12 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        return parent::render($request, $exception);
+        if ($exception instanceof ModelNotFoundException) {
+            return response()->view('errors.error', ['statusCode' => 404 , 'statusText' => 'page non trouvée'], 404);
+        }
+
+        return response()->view('errors.error', ['statusCode' => 500 , 'statusText' => 'Une erreur côté serveur est survenu'], 500);
+
+
     }
 }
