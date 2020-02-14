@@ -1,7 +1,7 @@
 # ProjetMVC
 Projet pour la semaine de MVC (laravel)
 
-Killian Ronvel, Corentin Fouquet
+Killian Ronvel (bufaloo), Corentin Fouquet (corentinft)
 
 # Prérequis
 
@@ -32,3 +32,11 @@ installez le projet laravel:
 lancez le projet :
 
     php artisan serve
+    
+# Mot de passe
+
+mailtrap:
+
+    arcadia.entreprise@gmail.com
+    
+    UnMotDePasseTresCompliqueMaGueule
