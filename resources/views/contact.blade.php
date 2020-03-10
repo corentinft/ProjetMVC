@@ -3,10 +3,6 @@
 @section('title', 'Contact')
 
 @section('style')
-    body {
-        overflow: auto;
-    }
-
     .full-height {
     height: 77.15vh;
     }

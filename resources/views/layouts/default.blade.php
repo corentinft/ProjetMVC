@@ -99,7 +99,7 @@
                                 <a href="{{ url('/') }}">Accueil</a>
                             </li>
                             <li>
-                                <a href="{{ url('/creation') }}">Nos créations</a>
+                                <a href="{{ url('creation') }}">Nos créations</a>
                             </li>
                             <li>
                                 <a href="{{ url('order') }}">Commander une borne d'arcade</a>
