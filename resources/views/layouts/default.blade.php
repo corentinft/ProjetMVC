@@ -79,6 +79,7 @@
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li><a href="{{ url('/creation') }}">Nos créations</a></li>
             <li><a href="{{ url('/order') }}">Commander une borne</a></li>
+            <li class="float-right"><a href="{{ url('/login') }}">Se connecter</a></li>
             <li class="float-right"><a href="{{ url('/contact') }}">Contact</a></li>
         </ul>
 
@@ -116,7 +117,7 @@
 
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#">FaceBook</a>
+                                <a href="#">Facebook</a>
                             </li>
                             <li>
                                 <a href="#">Twitter</a>
