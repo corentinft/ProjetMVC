@@ -16,6 +16,10 @@ Route::resource('order', 'OrderController');
 
 Route::resource('creation','CreationController');
 
+Route::get('article/all', 'PostController@all');
+
+Route::get('article/{id}', 'PostController@id');
+
 Route::get('/', function () {
     return view('home');
 });
