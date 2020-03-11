@@ -3,9 +3,7 @@
 @section('title', 'Commande')
 
 @section('style')
-    body {
-    overflow: auto;
-    }
+
 
     .full-height {
     height: 77.15vh;

@@ -14,6 +14,8 @@ Route::resource('contact', 'ContactController');
 
 Route::resource('order', 'OrderController');
 
+Route::resource('creation','CreationController');
+
 Route::get('article/all', 'PostController@all');
 
 Route::get('article/{id}', 'PostController@id');
@@ -21,3 +23,7 @@ Route::get('article/{id}', 'PostController@id');
 Route::get('/', function () {
     return view('home');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

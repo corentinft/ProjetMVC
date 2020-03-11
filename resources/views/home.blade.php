@@ -75,7 +75,7 @@
     .demo a {
         position: absolute;
         bottom: 20px;
-        left: 50%;
+        left: 46%;
         z-index: 2;
         display: inline-block;
         -webkit-transform: translate(0, -50%);
