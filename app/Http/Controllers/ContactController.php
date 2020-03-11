@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Forms\ContactForm;
 use App\Service\SendMail;
+use http\Exception;
 use Kris\LaravelFormBuilder\FormBuilder;
+use Symfony\Component\Debug\Exception\FatalThrowableError;
 
 class ContactController extends Controller {
 
@@ -21,7 +23,6 @@ class ContactController extends Controller {
 
         $this-> formBuilder = $formBuilder;
         $this-> sendMail = $sendMail;
-
 
     }
 
