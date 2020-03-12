@@ -24,6 +24,7 @@
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
+                z-index: 1;
                 height: 100vh;
                 width: 100vw;
                 margin: 0;
@@ -79,7 +80,28 @@
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li><a href="{{ url('/creation') }}">Nos créations</a></li>
             <li><a href="{{ url('/order') }}">Commander une borne</a></li>
-            <li class="float-right"><a href="{{ url('/login') }}">Se connecter</a></li>
+            @guest
+                <li class="float-right">
+                    <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                @if (Route::has('register'))
+                    <li class="float-right">
+                        <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+            @else
+                <li class="float-right">
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </li>
+            @endguest
             <li class="float-right"><a href="{{ url('/contact') }}">Contact</a></li>
         </ul>
 

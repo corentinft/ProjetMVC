@@ -13,7 +13,7 @@ class Post extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'object', 'text',
+        'title', 'object', 'text', 'user_id', 'url_image'
     ];
 
     /**
@@ -21,4 +21,5 @@ class Post extends Model
      */
     protected $hidden = [
     ];
+
 }

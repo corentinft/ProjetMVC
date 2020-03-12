@@ -18,6 +18,8 @@ Route::resource('creation','CreationController');
 
 Route::get('article/all', 'PostController@all');
 
+Route::resource('article/create', 'PostController');
+
 Route::get('article/{id}', 'PostController@id');
 
 Route::get('/', function () {
