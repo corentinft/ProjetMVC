@@ -78,7 +78,7 @@
     <body>
         <ul class="lists">
             <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li><a href="{{ url('/creation') }}">Nos créations</a></li>
+            <li><a href="{{ url('/article') }}">Nos créations</a></li>
             <li><a href="{{ url('/order') }}">Commander une borne</a></li>
             @guest
                 <li class="float-right">
@@ -101,8 +101,13 @@
                         @csrf
                     </form>
                 </li>
+                <li class="float-right">
+                    <a href="{{ url('article/main') }}">Mes Articles</a>
+                </li>
+
             @endguest
             <li class="float-right"><a href="{{ url('/contact') }}">Contact</a></li>
+
         </ul>
 
         <div class="container">

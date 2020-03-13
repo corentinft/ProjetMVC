@@ -14,13 +14,9 @@ Route::resource('contact', 'ContactController');
 
 Route::resource('order', 'OrderController');
 
-Route::resource('creation','CreationController');
+Route::get('article/main', 'PostController@main');
 
-Route::get('article/all', 'PostController@all');
-
-Route::resource('article/create', 'PostController');
-
-Route::get('article/{id}', 'PostController@id');
+Route::resource('article', 'PostController');
 
 Route::get('/', function () {
     return view('home');
