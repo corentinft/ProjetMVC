@@ -206,9 +206,9 @@ class PostController extends Controller
         dd('oui');
         $post = Post::find($id);
         $user_id = Auth::User()['id'];
+
         if (Auth::User() != null && $user_id == $post['user_id']){
             Post::destroy($id);
-
             return view('home');
         }
 

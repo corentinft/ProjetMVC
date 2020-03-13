@@ -16,6 +16,8 @@ Route::resource('order', 'OrderController');
 
 Route::get('article/main', 'PostController@main');
 
+Route::delete('delete/{id}', 'DeleteController@destroy');
+
 Route::resource('article', 'PostController');
 
 Route::get('/', function () {

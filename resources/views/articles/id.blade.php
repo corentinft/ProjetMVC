@@ -32,7 +32,7 @@
                         </button>
                         <button>
                             <a href="{{ route('article.edit', ['article' => $post['id']]) }}" style="text-decoration: none; color: black">
-                                Modifier l'article
+                                Modifier  l'article
                             </a>
                         </button>
                     </div>
